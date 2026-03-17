@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manasi Ahire | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #2563eb;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --card-bg: rgba(255, 255, 255, 0.8);
+    		--bg: #f5f5dc; /* Changed to Beige */
+    		--text: #1e293b;
+    		--card-bg: rgba(255, 255, 255, 0.8);
         }
 
         body {
@@ -22,13 +23,14 @@
             padding: 0;
         }
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            color: white;
-        }
-
+    header {
+    text-align: center;
+    padding: 80px 20px;
+    /* Smooth gradient from vibrant red to a deeper crimson */
+    background: linear-gradient(135deg, #ff4d4d 0%, #d32f2f 100%);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
         header h1 { margin: 0; font-size: 3rem; letter-spacing: -1px; }
 
         main { max-width: 900px; margin: -40px auto 50px; padding: 0 20px; }
@@ -43,7 +45,9 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 25px; }
+        h2 { border-left: 4px solid #d32f2f; 
+    padding-left: 15px;
+    margin-bottom: 25px; }
 
         /* Experience Timeline */
         .timeline { border-left: 2px solid #e2e8f0; padding-left: 20px; }
@@ -51,14 +55,27 @@
         .timeline-dot {
             position: absolute; left: -27px; top: 5px;
             width: 12px; height: 12px; background: var(--primary); border-radius: 50%;
+            
         }
 
-        /* Skills Chips */
-        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skills-list span {
-            background: #e2e8f0; padding: 6px 14px; border-radius: 20px;
-            font-size: 0.85rem; font-weight: 600;
-        }
+        /* Updated skill tags to accommodate icons */
+.skill-tag {
+    background: #fff;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: all 0.3s ease;
+}
+
+.skill-tag i {
+    font-size: 1rem;
+}
 
         /* Project Grid */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
@@ -119,21 +136,22 @@
                 <p>Optimized scheduling for 200+ agents and improved service levels by 15% through data-driven forecasting.</p>
             </div>
         </div>
-
-
-
-        
-
-
         
     </section>
 
     <section>
         <h2>Core Skills</h2>
         <div class="skills-list">
-            <span>Excel</span> <span>SQL</span> <span>Tableau</span> 
-            <span>Power Query</span> <span>Power BI</span> <span>NICE IEX</span> 
-            <span>Calabrio</span> <span>Verint</span> <span>Looker</span>
+           <div class="skills-container">
+    <span class="skill-tag"><i class="fa-regular fa-file-excel"></i> Excel</span>
+    <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
+    <span class="skill-tag"><i class="fa-solid fa-chart-column"></i> Tableau</span>
+    <span class="skill-tag"><i class="fa-solid fa-filter"></i> Power Query</span>
+    <span class="skill-tag"><i class="fa-solid fa-chart-line"></i> Power BI</span>
+    <span class="skill-tag"><i class="fa-solid fa-headset"></i> NICE IEX</span>
+    <span class="skill-tag"><i class="fa-solid fa-clock"></i> Calabrio</span>
+    <span class="skill-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Looker</span>
+</div>
         </div>
     </section>
 
