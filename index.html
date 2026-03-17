@@ -3,59 +3,105 @@
 <head>
 <title>My Portfolio</title>
 <style>
-body {
-font-family: Arial;
-margin: 40px;
-background-color: #f4f4f4;
+/* Layout Splits */
+.split-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.about-half, .skills-half {
+    flex: 1; /* Makes them take up equal space */
 }
 
-h1 {
-color: #333;
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #333;
+    margin: 20px 0;
+}
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+.timeline-dot {
+    position: absolute;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+}
+.date {
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9em;
 }
 
-.section {
-margin-bottom: 30px;
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 </style>
 </head>
 
 <body>
+<body>
+    <header>
+        <h1>Manasi Ahire</h1>
+        <p>Workforce Analyst | Business Analyst</p>
+    </header>
 
-<h1>Manasi Ahire</h1>
-<p>Workforce Analyst| Business Analyst</p>
+    <main>
+        <section class="split-container">
+            <div class="about-half">
+                <h2>About Me</h2>
+                <p>I am looking for opportunities where I can use my workforce analytics and planning experience to drive measurable operational impact... [Your Bio Continued]</p>
+            </div>
+            <div class="skills-half">
+                <h2>Core Skills</h2>
+                <p>Excel | SQL | Tableau | Power Query | Power BI | NICE IEX | Calabrio | Verint | Looker</p>
+            </div>
+        </section>
 
-<div class="section">
-<h2>About Me</h2>
-<p>I am looking for opportunities where I can use my workforce analytics and planning experience to drive measurable operational impact while continuing to grow. I’m particularly interested in roles that involve advanced capacity planning, real-time decision support, and cross-functional collaboration with operations, HR, and business leadership. I would love to work in a data-driven, customer-focused, and open to continuous improvement environment. From a growth perspective, I want to gain deep expertise in predictive analytics, automation, and AI-enabled workforce optimization.
-</p>
-</div>
+        <section class="timeline-section">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Workforce Analyst</h3>
+                        <p class="date">2022 - Present</p>
+                        <p>Detailed description of your role and impact goes here.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
 
-<div class="section">
-<h2>Projects</h2>
-
-<h3>Workforce Forecasting Dashboard</h3>
-<p>Built a forecasting dashboard using Power BI to predict call volumes.</p>
-
-<h3>Analysis on Factors Affecting University Student Mental Health Using Machine Learning Models</h3>
-<p>Designed the study by using a dataset of survey questionnaires, running statistical tests on the data (e.g. ANOVA, regression analysis) and generating insights from analytics results to present evidence-based recommendations that will help improve mental health support services. Used python for data preprocessing, data visualization with machine learning models of logistic regression and gradient boosting.
-</p>
-
-<h3>Data Warehouse Development for a Car Rental Website</h3>
-<p>Designed and managed a MySQL database by defining schemas, building tables, establishing relationships through ER & dimensional modeling, and executing ETL procedures to combine data from different sources. Built interactive dashboards and visualizations in QlikView to display user interface options and compare rental performance metrics.
-</p>
-
-</div>
-
-<div class="section">
-<h2>Skills</h2>
-<p>Excel | SQL | Tableau | Power Query | Power BI | NICE IEX | Calabrio | Verint| Looker </p>
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<p>Email: manasi.ahire@gmail.com</p>
-<p>LinkedIn: https://www.linkedin.com/in/manasi-ahire/</p>
-</div>
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Workforce Forecasting Dashboard</h3>
+                    <p>Built a forecasting dashboard using Power BI to predict call volumes.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Mental Health ML Analysis</h3>
+                    <p>Designed the study using survey data and ML models (Logistic Regression/Gradient Boosting).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
 
 </body>
 </html>
