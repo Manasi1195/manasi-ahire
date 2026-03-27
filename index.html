@@ -14,23 +14,23 @@
   --navy-mid:    #ede7d9;   /* alternate section — slightly deeper beige */
   --navy-card:   #faf7f2;   /* cards — near-white cream */
   --navy-border: #d9cfc0;   /* borders — warm tan */
- 
+
   /* Accent — light red / warm coral-red replacing cyan & blue */
   --cyan:        #c0392b;               /* primary accent red */
   --cyan-dim:    rgba(192,57,43,.12);   /* tinted bg */
   --blue:        #e05c4a;               /* secondary accent (was blue) */
   --blue-dim:    rgba(224,92,74,.12);
- 
+
   /* Text */
   --white:       #1a1a1a;   /* headings — near black */
   --muted:       #6b6055;   /* muted labels — warm dark grey */
   --text:        #3d3530;   /* body copy — deep warm brown-grey */
   --success:     #b85c00;   /* tertiary accent — deep amber */
- 
+
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'DM Sans', sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
- 
+
   --glow-cyan: 0 0 16px rgba(192,57,43,.2), 0 0 40px rgba(192,57,43,.08);
   --glow-blue: 0 0 16px rgba(224,92,74,.2), 0 0 40px rgba(224,92,74,.08);
   --t: .28s cubic-bezier(.4,0,.2,1);
@@ -41,9 +41,9 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--navy); color: var(--text); line-height: 1.65; overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 ::selection { background: var(--cyan-dim); color: var(--cyan); }
- 
+
 #particle-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .25; }
- 
+
 /* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -76,18 +76,18 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.1); }
 .nav-cta:hover { background: var(--cyan-dim); box-shadow: var(--glow-cyan); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--muted); border-radius: 2px; }
- 
+
 /* SECTIONS */
 section { position: relative; z-index: 1; padding: 100px 5vw; }
 .section-label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em; color: var(--cyan); text-transform: uppercase; margin-bottom: .75rem; }
 .section-title { font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.8rem); font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 3rem; }
 .section-title em { font-style: normal; color: var(--cyan); }
- 
+
 /* REVEAL — content visible by default; JS adds anim-ready to animate on scroll */
 .reveal { opacity: 1; transform: none; transition: opacity .65s ease, transform .65s ease; }
 .reveal.anim-ready { opacity: 0; transform: translateY(28px); }
 .reveal.visible { opacity: 1 !important; transform: translateY(0) !important; }
- 
+
 /* HERO */
 #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 120px; padding-bottom: 80px; }
 .hero-eyebrow {
@@ -95,8 +95,8 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   text-transform: uppercase; margin-bottom: 1.2rem; display: flex; align-items: center; gap: .75rem;
 }
 .hero-eyebrow::before { content: ''; display: inline-block; width: 36px; height: 2px; background: var(--cyan); border-radius: 2px; box-shadow: var(--glow-cyan); }
-.hero-name { font-family: var(--font-display); font-size: clamp(3rem,8vw,6.5rem); font-weight: 900; color: var(--white); line-height: 1.0; letter-spacing: -.03em; margin-bottom: .6rem; }
-.hero-name .accent { color: var(--cyan); text-shadow: var(--glow-cyan); }
+.hero-name { font-family: var(--font-display); font-size: clamp(3rem,8vw,6.5rem); font-weight: 900; color: #1a1a1a; line-height: 1.0; letter-spacing: -.03em; margin-bottom: .6rem; }
+.hero-name .accent { color: #1a1a1a; }
 .hero-tagline { font-size: clamp(1rem,2.2vw,1.35rem); font-weight: 300; color: var(--muted); max-width: 640px; margin-bottom: 2.5rem; }
 .hero-tagline strong { color: var(--white); font-weight: 600; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
@@ -119,9 +119,9 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   transition: border-color var(--t), transform var(--t), box-shadow var(--t);
 }
 .stat-card:hover { border-color: var(--cyan); transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,229,255,.12); }
-.stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; color: var(--cyan); line-height: 1; text-shadow: var(--glow-cyan); }
-.stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; margin-top: .35rem; }
- 
+.stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; color: #1a1a1a; line-height: 1; }
+.stat-label { font-family: var(--font-mono); font-size: .68rem; color: #5a5a5a; text-transform: uppercase; letter-spacing: .12em; margin-top: .35rem; }
+
 /* ABOUT */
 #about { background: var(--navy-mid); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
@@ -139,7 +139,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .chip:hover { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); transform: scale(1.06); }
 .chip.blue:hover { color: #2563c7; border-color: #2563c7; background: rgba(37,99,199,.1); }
 .chip.success:hover { color: #2d7a3a; border-color: #2d7a3a; background: rgba(45,122,58,.1); }
- 
+
 /* EXPERIENCE */
 .exp-timeline { display: flex; flex-direction: column; gap: 2.5rem; }
 .exp-card {
@@ -169,7 +169,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .win-pill {
   font-family: var(--font-mono); font-size: .72rem; padding: .3rem .85rem; border-radius: 100px;
   font-weight: 500; display: inline-flex; align-items: center; gap: .4rem;
-  transition: transform var(--t); animation: pill-pulse 3s ease-in-out infinite;
+  transition: transform var(--t);
 }
 .win-pill:hover { transform: scale(1.08); }
 .win-pill.cyan { background: rgba(192,57,43,.1); color: #c0392b; border: 1px solid rgba(192,57,43,.3); }
@@ -177,7 +177,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .win-pill.green { background: rgba(45,122,58,.1); color: #2d7a3a; border: 1px solid rgba(45,122,58,.3); }
 .win-pill.orange { background: rgba(184,92,0,.1); color: #b85c00; border: 1px solid rgba(184,92,0,.3); }
 @keyframes pill-pulse { 0%,100% { box-shadow: none; } 50% { box-shadow: 0 0 10px currentColor; } }
- 
+
 /* PROJECTS */
 #education { background: var(--navy-mid); }
 #projects { background: var(--navy); }
@@ -201,7 +201,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
 .tag { font-family: var(--font-mono); font-size: .66rem; padding: .2rem .55rem; background: rgba(255,255,255,.04); border: 1px solid var(--navy-border); border-radius: 4px; color: var(--muted); transition: color var(--t), border-color var(--t); }
 .project-card:hover .tag { color: var(--text); border-color: rgba(255,255,255,.12); }
- 
+
 /* EDUCATION */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
 .edu-card, .cert-card {
@@ -224,7 +224,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .cert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: var(--glow-cyan); flex-shrink: 0; }
 .cert-name { font-size: .88rem; color: var(--text); font-weight: 500; }
 .cert-issuer { font-family: var(--font-mono); font-size: .68rem; color: var(--muted); margin-top: .15rem; }
- 
+
 /* CONTACT */
 #contact { background: var(--navy-mid); text-align: center; }
 .contact-banner { max-width: 700px; margin: 0 auto; }
@@ -243,9 +243,9 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   transition: color var(--t), border-color var(--t), background var(--t), transform var(--t), box-shadow var(--t);
 }
 .social-link:hover { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); transform: translateY(-3px); box-shadow: var(--glow-cyan); }
- 
+
 footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; border-top: 1px solid var(--navy-border); font-family: var(--font-mono); font-size: .7rem; color: var(--muted); }
- 
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -268,9 +268,9 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 </style>
 </head>
 <body>
- 
+
 <canvas id="particle-canvas"></canvas>
- 
+
 <nav id="main-nav">
   <div class="nav-logo">MA<span>.</span></div>
   <ul class="nav-links">
@@ -280,21 +280,20 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#206d414e4153496148495245604d590e554e540e454455" class="nav-cta">Hire Me</a>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-eyebrow">Senior Workforce &amp; Business Analyst</div>
   <h1 class="hero-name reveal">Manasi <span class="accent">Ahire</span></h1>
   <p class="hero-tagline reveal">
-    Turning workforce complexity into operational clarity at enterprise scale.
+    Turning workforce complexity into operational clarity — at enterprise scale.
     I build the forecasting models, real-time dashboards, and capacity plans that help leadership act before problems become crises.
   </p>
   <div class="hero-actions reveal">
     <a href="#experience" class="btn-primary">View My Work ↓</a>
-    <a href="/cdn-cgi/l/email-protection#a9e4c8c7c8dac0e8c1c0dbcce9c4d087dcc7dd87cccddc" class="btn-secondary">Let's Talk →</a>
+    <a href="#contact" class="btn-secondary">Contact Me →</a>
   </div>
   <div class="hero-stats reveal">
     <div class="stat-card"><div class="stat-num">7+</div><div class="stat-label">Years Experience</div></div>
@@ -303,7 +302,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Industries</div></div>
   </div>
 </section>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label">01 / About</div>
@@ -347,13 +346,13 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     </div>
   </div>
 </section>
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">02 / Experience</div>
   <h2 class="section-title">Where I've <em>made a dent</em></h2>
   <div class="exp-timeline">
- 
+
     <div class="exp-card reveal">
       <div class="exp-meta">
         <div><div class="exp-role">Workforce Analyst</div><div class="exp-company">CoServ Electric — Utility Industry</div></div>
@@ -380,7 +379,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         <span class="win-pill orange">HR & payroll partnership</span>
       </div>
     </div>
- 
+
     <div class="exp-card reveal">
       <div class="exp-meta">
         <div><div class="exp-role">WFM &amp; Insights Intern</div><div class="exp-company">Richemont — Global Luxury Retail</div></div>
@@ -407,7 +406,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         <span class="win-pill orange">Calabrio + Vonage + Looker</span>
       </div>
     </div>
- 
+
     <div class="exp-card reveal">
       <div class="exp-meta">
         <div><div class="exp-role">Business Analyst</div><div class="exp-company">Genpact — Fintech / Financial Services</div></div>
@@ -434,7 +433,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         <span class="win-pill orange">↑ 15% payout accuracy</span>
       </div>
     </div>
- 
+
     <div class="exp-card reveal">
       <div class="exp-meta">
         <div><div class="exp-role">Real-Time Analyst</div><div class="exp-company">Genpact — Fintech / Financial Services</div></div>
@@ -461,10 +460,10 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         <span class="win-pill orange">150+ agents monitored</span>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="section-label">03 / Education</div>
@@ -479,13 +478,13 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     </div>
   </div>
 </section>
- 
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">04 / Projects</div>
   <h2 class="section-title">Things I've <em>built &amp; shipped</em></h2>
   <div class="projects-grid">
- 
+
     <div class="project-card reveal">
       <div class="project-body">
         <div class="project-category">Machine Learning / Mental Health Analytics</div>
@@ -501,7 +500,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         </div>
       </div>
     </div>
- 
+
     <div class="project-card reveal">
       <div class="project-body">
         <div class="project-category">Data Engineering / Business Intelligence</div>
@@ -517,11 +516,25 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         </div>
       </div>
     </div>
- 
+
+    <div class="project-card reveal">
+      <div class="project-body">
+        <div class="project-category">Predictive Modeling / Sports Analytics</div>
+        <div class="project-title">NBA Career Prediction Using Machine Learning in SAS Enterprise Miner</div>
+        <p class="project-desc">Built and compared multiple classification models — logistic regression, decision trees, and auto-neural networks — to predict whether an NBA player would have a career lasting 5+ years based on rookie-season performance stats. Evaluated models against ROC curves and misclassification rates, selecting the auto-neural network for deployment as the top performer across both metrics.</p>
+        <div class="project-metrics">
+          <span class="metric-badge">Highest ROC value</span>
+          <span class="metric-badge">Lowest misclassification rate</span>
+          <span class="metric-badge">3 models compared</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">SAS Enterprise Miner</span><span class="tag">Logistic Regression</span><span class="tag">Decision Trees</span><span class="tag">Neural Networks</span><span class="tag">ROC Analysis</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
- 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-banner reveal">
     <div class="section-label" style="text-align:center;display:block;">05 / Contact</div>
@@ -544,14 +557,14 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     </div>
   </div>
 </section>
- 
+
 <footer>
   <span>Manasi Ahire · Senior Workforce Analyst · Denton, TX · <span id="year"></span></span>
 </footer>
- 
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
- 
+
   /* Particle Network */
   (function(){
     const canvas = document.getElementById('particle-canvas');
@@ -574,7 +587,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     window.addEventListener('resize',()=>{ cancelAnimationFrame(animId); init(); draw(); });
     init(); draw();
   })();
- 
+
   /* Nav scroll */
   const nav = document.getElementById('main-nav');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -585,13 +598,13 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     sections.forEach(s=>{ if(window.scrollY >= s.offsetTop - 120) cur = s.id; });
     navLinks.forEach(a=>{ a.classList.toggle('active', a.getAttribute('href')==='#'+cur); });
   },{passive:true});
- 
+
   /* Scroll reveal — add anim-ready AFTER first paint so content is visible without JS */
   requestAnimationFrame(()=>{
     requestAnimationFrame(()=>{
       const items = document.querySelectorAll('.reveal');
       items.forEach(el => el.classList.add('anim-ready'));
- 
+
       const obs = new IntersectionObserver(entries=>{
         entries.forEach(entry=>{
           if(entry.isIntersecting){
@@ -604,11 +617,11 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
           }
         });
       },{threshold:0.08, rootMargin:'0px 0px -20px 0px'});
- 
+
       items.forEach(el => obs.observe(el));
     });
   });
- 
+
   /* Hamburger */
   document.getElementById('hamburger').addEventListener('click',()=>{
     const links = document.querySelector('.nav-links');
