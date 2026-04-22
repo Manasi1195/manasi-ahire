@@ -140,31 +140,105 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .chip.blue:hover { color: #2563c7; border-color: #2563c7; background: rgba(37,99,199,.1); }
 .chip.success:hover { color: #2d7a3a; border-color: #2d7a3a; background: rgba(45,122,58,.1); }
 
-/* EXPERIENCE */
-.exp-timeline { display: flex; flex-direction: column; gap: 2.5rem; }
+/* EXPERIENCE TIMELINE */
+.exp-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* The continuous vertical line */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 160px;
+  width: 2px;
+  background: var(--navy-border);
+  z-index: 0;
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0;
+  align-items: start;
+  position: relative;
+  padding-bottom: 2.75rem;
+}
+.exp-row:last-child { padding-bottom: 0; }
+
+/* Date label on the left */
+.exp-date-col {
+  text-align: right;
+  padding-right: 1.5rem;
+  padding-top: .28rem;
+}
+.exp-date {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--muted);
+  letter-spacing: .06em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Dot — absolutely centered on the line */
+.exp-dot-col {
+  position: absolute;
+  left: 160px;
+  top: .28rem;
+  width: 0;
+  height: 0;
+  z-index: 2;
+}
+.exp-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--navy-card);
+  border: 2px solid var(--cyan);
+  position: absolute;
+  top: 0;
+  left: -6px;
+  transition: background var(--t), transform var(--t);
+}
+.exp-row:hover .exp-dot {
+  background: var(--cyan);
+  transform: scale(1.2);
+}
+
+/* Card on the right */
 .exp-card {
-  background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: var(--r);
-  padding: 2rem 2.25rem; position: relative; overflow: hidden;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--r);
+  padding: 1.75rem 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-left: 1.75rem;
   transition: border-color var(--t), transform var(--t), box-shadow var(--t);
 }
 .exp-card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
   background: linear-gradient(to bottom, var(--cyan), var(--blue));
-  border-radius: 4px 0 0 4px; opacity: 0; transition: opacity var(--t);
+  border-radius: 3px 0 0 3px; opacity: 0; transition: opacity var(--t);
 }
-.exp-card:hover { border-color: rgba(0,229,255,.3); transform: translateX(6px); box-shadow: -4px 0 40px rgba(0,229,255,.08); }
+.exp-card:hover { border-color: rgba(192,57,43,.25); transform: translateX(4px); box-shadow: 0 8px 32px rgba(192,57,43,.07); }
 .exp-card:hover::before { opacity: 1; }
-.exp-meta { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
-.exp-role { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--white); }
-.exp-company { font-size: .9rem; color: var(--cyan); margin-top: .15rem; }
-.exp-date { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); letter-spacing: .08em; white-space: nowrap; padding-top: .2rem; }
-.story-blocks { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1.5rem; }
+
+.exp-meta { margin-bottom: 1.25rem; }
+.exp-role { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); }
+.exp-company { font-size: .88rem; color: var(--cyan); margin-top: .15rem; }
+
+.story-blocks { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1.25rem; }
 .story-block { background: rgba(255,255,255,.03); border: 1px solid var(--navy-border); border-radius: 10px; padding: 1rem 1.1rem; }
 .story-block-label { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
 .story-block-label.challenge { color: #c0392b; }
 .story-block-label.built { color: #2563c7; }
 .story-block-label.result { color: #2d7a3a; }
 .story-block p { font-size: .87rem; color: var(--text); line-height: 1.6; }
+
 .win-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
 .win-pill {
   font-family: var(--font-mono); font-size: .72rem; padding: .3rem .85rem; border-radius: 100px;
@@ -172,10 +246,10 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   transition: transform var(--t);
 }
 .win-pill:hover { transform: scale(1.08); }
-.win-pill.cyan { background: rgba(192,57,43,.1); color: #c0392b; border: 1px solid rgba(192,57,43,.3); }
-.win-pill.blue { background: rgba(37,99,199,.1); color: #2563c7; border: 1px solid rgba(37,99,199,.3); }
-.win-pill.green { background: rgba(45,122,58,.1); color: #2d7a3a; border: 1px solid rgba(45,122,58,.3); }
-.win-pill.orange { background: rgba(184,92,0,.1); color: #b85c00; border: 1px solid rgba(184,92,0,.3); }
+.win-pill.cyan { background: #ffffff; color: #1a1a1a; border: 1px solid #d0ccc8; }
+.win-pill.blue  { background: #ffffff; color: #1a1a1a; border: 1px solid #d0ccc8; }
+.win-pill.green { background: #ffffff; color: #1a1a1a; border: 1px solid #d0ccc8; }
+.win-pill.orange{ background: #ffffff; color: #1a1a1a; border: 1px solid #d0ccc8; }
 @keyframes pill-pulse { 0%,100% { box-shadow: none; } 50% { box-shadow: 0 0 10px currentColor; } }
 
 /* PROJECTS */
@@ -258,8 +332,13 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   section { padding: 80px 5vw; }
-  .exp-meta { flex-direction: column; }
   .projects-grid { grid-template-columns: 1fr; }
+  /* Collapse timeline on mobile */
+  .exp-timeline::before { left: 0; }
+  .exp-row { grid-template-columns: 1fr; padding-left: 1.25rem; }
+  .exp-date-col { text-align: left; padding-right: 0; padding-left: 0; }
+  .exp-dot-col { left: 0; }
+  .exp-card { margin-left: 0; }
 }
 @media (max-width: 420px) {
   .hero-stats { grid-template-columns: 1fr 1fr; }
@@ -350,114 +429,138 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">02 / Experience</div>
-  <h2 class="section-title">Where I've <em>made a dent</em></h2>
+  <h2 class="section-title">My <em>Experience</em></h2>
   <div class="exp-timeline">
 
-    <div class="exp-card reveal">
-      <div class="exp-meta">
-        <div><div class="exp-role">Workforce Analyst</div><div class="exp-company">CoServ Electric — Utility Industry</div></div>
+    <div class="exp-row reveal">
+      <div class="exp-date-col">
         <div class="exp-date">Aug 2025 — Present</div>
       </div>
-      <div class="story-blocks">
-        <div class="story-block">
-          <div class="story-block-label challenge">The Challenge</div>
-          <p>Call volume forecasting was misaligned with actual demand, creating avoidable staffing gaps and slow data refresh cycles that delayed leadership decisions.</p>
+      <div class="exp-dot-col"><div class="exp-dot"></div></div>
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-role">Workforce Analyst</div>
+          <div class="exp-company">CoServ Electric — Utility Industry</div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label built">What I Built</div>
-          <p>Leveraged NICE WFM to refine forecast models and streamlined Power BI reporting pipelines. Partnered with HR on attendance tracking, timecard accuracy, and payroll prep while managing schedule exceptions to balance capacity goals.</p>
+        <div class="story-blocks">
+          <div class="story-block">
+            <div class="story-block-label challenge">The Challenge</div>
+            <p>Call volume forecasting was misaligned with actual demand, creating avoidable staffing gaps and slow data refresh cycles that delayed leadership decisions.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label built">What I Built</div>
+            <p>Leveraged NICE WFM to refine forecast models and streamlined Power BI reporting pipelines. Partnered with HR on attendance tracking, timecard accuracy, and payroll prep while managing schedule exceptions to balance capacity goals.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label result">The Result</div>
+            <p>Improved forecast-to-demand alignment, maintaining an 80% average SLA during volume spikes while reducing manual data preparation overhead.</p>
+          </div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label result">The Result</div>
-          <p>Improved forecast-to-demand alignment, maintaining an 80% average SLA during volume spikes while reducing manual data preparation overhead.</p>
+        <div class="win-pills">
+          <span class="win-pill cyan">80% SLA maintained</span>
+          <span class="win-pill green">Faster data refresh</span>
+          <span class="win-pill blue">NICE WFM + Power BI</span>
+          <span class="win-pill orange">HR &amp; payroll partnership</span>
         </div>
-      </div>
-      <div class="win-pills">
-        <span class="win-pill cyan">80% SLA maintained</span>
-        <span class="win-pill green">Faster data refresh</span>
-        <span class="win-pill blue">NICE WFM + Power BI</span>
-        <span class="win-pill orange">HR & payroll partnership</span>
       </div>
     </div>
 
-    <div class="exp-card reveal">
-      <div class="exp-meta">
-        <div><div class="exp-role">WFM &amp; Insights Intern</div><div class="exp-company">Richemont — Global Luxury Retail</div></div>
+    <div class="exp-row reveal">
+      <div class="exp-date-col">
         <div class="exp-date">Jun 2025 — Jul 2025</div>
       </div>
-      <div class="story-blocks">
-        <div class="story-block">
-          <div class="story-block-label challenge">The Challenge</div>
-          <p>Global luxury retail service centers needed real-time visibility into agent occupancy and utilization, while workforce planning lacked rigour to benchmark staffing efficiency.</p>
+      <div class="exp-dot-col"><div class="exp-dot"></div></div>
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-role">WFM &amp; Insights Intern</div>
+          <div class="exp-company">Richemont — Global Luxury Retail</div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label built">What I Built</div>
-          <p>Built scheduling and adherence dashboards in Calabrio to monitor occupancy. Used Vonage and Looker to analyze operations data and track KPIs. Processed ~50 SAP service orders daily, mapping purchase-to-service flows and analyzing sales trends.</p>
+        <div class="story-blocks">
+          <div class="story-block">
+            <div class="story-block-label challenge">The Challenge</div>
+            <p>Global luxury retail service centers needed real-time visibility into agent occupancy and utilization, while workforce planning lacked rigour to benchmark staffing efficiency.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label built">What I Built</div>
+            <p>Built scheduling and adherence dashboards in Calabrio to monitor occupancy. Used Vonage and Looker to analyze operations data and track KPIs. Processed ~50 SAP service orders daily, mapping purchase-to-service flows and analyzing sales trends.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label result">The Result</div>
+            <p>Achieved 85% agent occupancy and utilization targets, and improved workforce planning accuracy by 12% through data-driven capacity assessments.</p>
+          </div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label result">The Result</div>
-          <p>Achieved 85% agent occupancy and utilization targets, and improved workforce planning accuracy by 12% through data-driven capacity assessments.</p>
+        <div class="win-pills">
+          <span class="win-pill cyan">85% occupancy achieved</span>
+          <span class="win-pill green">↑ 12% planning accuracy</span>
+          <span class="win-pill blue">50 SAP orders/day</span>
+          <span class="win-pill orange">Calabrio + Vonage + Looker</span>
         </div>
-      </div>
-      <div class="win-pills">
-        <span class="win-pill cyan">85% occupancy achieved</span>
-        <span class="win-pill green">↑ 12% planning accuracy</span>
-        <span class="win-pill blue">50 SAP orders/day</span>
-        <span class="win-pill orange">Calabrio + Vonage + Looker</span>
       </div>
     </div>
 
-    <div class="exp-card reveal">
-      <div class="exp-meta">
-        <div><div class="exp-role">Business Analyst</div><div class="exp-company">Genpact — Fintech / Financial Services</div></div>
+    <div class="exp-row reveal">
+      <div class="exp-date-col">
         <div class="exp-date">Dec 2020 — Jan 2023</div>
       </div>
-      <div class="story-blocks">
-        <div class="story-block">
-          <div class="story-block-label challenge">The Challenge</div>
-          <p>HR stakeholders had no self-service reporting visibility. Incentive calculations for 500+ employees were managed in static spreadsheets with no audit trail or performance framework.</p>
+      <div class="exp-dot-col"><div class="exp-dot"></div></div>
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-role">Business Analyst</div>
+          <div class="exp-company">Genpact — Fintech / Financial Services</div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label built">What I Built</div>
-          <p>Developed comprehensive dashboards in SQL, Google Data Studio, and Tableau. Implemented advanced Excel functions to process payroll data for 500+ employees and defined key metrics for performance-based compensation.</p>
+        <div class="story-blocks">
+          <div class="story-block">
+            <div class="story-block-label challenge">The Challenge</div>
+            <p>HR stakeholders had no self-service reporting visibility. Incentive calculations for 500+ employees were managed in static spreadsheets with no audit trail or performance framework.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label built">What I Built</div>
+            <p>Developed comprehensive dashboards in SQL, Google Data Studio, and Tableau. Implemented advanced Excel functions to process payroll data for 500+ employees and defined key metrics for performance-based compensation.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label result">The Result</div>
+            <p>30% improvement in ad-hoc reporting efficiency, 15% improvement in payout accuracy, and a 25% increase in employee satisfaction tied to compensation transparency.</p>
+          </div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label result">The Result</div>
-          <p>30% improvement in ad-hoc reporting efficiency, 15% improvement in payout accuracy, and a 25% increase in employee satisfaction tied to compensation transparency.</p>
+        <div class="win-pills">
+          <span class="win-pill cyan">↑ 30% reporting efficiency</span>
+          <span class="win-pill green">↑ 25% eNPS on comp fairness</span>
+          <span class="win-pill blue">500+ employee payroll</span>
+          <span class="win-pill orange">↑ 15% payout accuracy</span>
         </div>
-      </div>
-      <div class="win-pills">
-        <span class="win-pill cyan">↑ 30% reporting efficiency</span>
-        <span class="win-pill green">↑ 25% eNPS on comp fairness</span>
-        <span class="win-pill blue">500+ employee payroll</span>
-        <span class="win-pill orange">↑ 15% payout accuracy</span>
       </div>
     </div>
 
-    <div class="exp-card reveal">
-      <div class="exp-meta">
-        <div><div class="exp-role">Real-Time Analyst</div><div class="exp-company">Genpact — Fintech / Financial Services</div></div>
+    <div class="exp-row reveal">
+      <div class="exp-date-col">
         <div class="exp-date">Jan 2017 — Nov 2020</div>
       </div>
-      <div class="story-blocks">
-        <div class="story-block">
-          <div class="story-block-label challenge">The Challenge</div>
-          <p>A 150+ agent contact center had reactive SLA management — breaches identified after the fact, productivity undermined by delayed decisions, and escalations climbing.</p>
+      <div class="exp-dot-col"><div class="exp-dot"></div></div>
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-role">Real-Time Analyst</div>
+          <div class="exp-company">Genpact — Fintech / Financial Services</div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label built">What I Built</div>
-          <p>Monitored real-time performance metrics, flagging SLA breaches as they formed and using live data to drive intraday staffing decisions. Published end-of-day summary reports and delivered real-time updates to 100+ frontline agents.</p>
+        <div class="story-blocks">
+          <div class="story-block">
+            <div class="story-block-label challenge">The Challenge</div>
+            <p>A 150+ agent contact center had reactive SLA management — breaches identified after the fact, productivity undermined by delayed decisions, and escalations climbing.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label built">What I Built</div>
+            <p>Monitored real-time performance metrics, flagging SLA breaches as they formed and using live data to drive intraday staffing decisions. Published end-of-day summary reports and delivered real-time updates to 100+ frontline agents.</p>
+          </div>
+          <div class="story-block">
+            <div class="story-block-label result">The Result</div>
+            <p>12% improvement in daily SLA compliance, 10% increase in agent utilization, and a 20% reduction in escalations through proactive real-time communication.</p>
+          </div>
         </div>
-        <div class="story-block">
-          <div class="story-block-label result">The Result</div>
-          <p>12% improvement in daily SLA compliance, 10% increase in agent utilization, and a 20% reduction in escalations through proactive real-time communication.</p>
+        <div class="win-pills">
+          <span class="win-pill cyan">↑ 12% SLA compliance</span>
+          <span class="win-pill green">↓ 20% escalations</span>
+          <span class="win-pill blue">↑ 10% agent utilization</span>
+          <span class="win-pill orange">150+ agents monitored</span>
         </div>
-      </div>
-      <div class="win-pills">
-        <span class="win-pill cyan">↑ 12% SLA compliance</span>
-        <span class="win-pill green">↓ 20% escalations</span>
-        <span class="win-pill blue">↑ 10% agent utilization</span>
-        <span class="win-pill orange">150+ agents monitored</span>
       </div>
     </div>
 
