@@ -26,7 +26,7 @@ Built with vanilla HTML, CSS, and JavaScript, no frameworks, no build tools, no 
 |---|---------|-------------|
 | 01 | About | Bio, background, and full skills stack |
 | 02 | Experience | Timeline of 4 roles across 3 industries |
-| 03 | Education | M.S. Business Analytics — UNT, GPA 3.8 |
+| 03 | Education | M.S. Business Analytics from UNT, GPA 3.8 |
 | 04 | Projects | ML, data engineering, and predictive modeling |
 | 05 | Contact | Links and availability |
 
