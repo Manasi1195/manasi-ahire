@@ -94,7 +94,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   font-family: var(--font-mono); font-size: .8rem; letter-spacing: .2em; color: var(--cyan);
   text-transform: uppercase; margin-bottom: 1.2rem; display: flex; align-items: center; gap: .75rem;
 }
-.hero-eyebrow::before { content: ''; display: inline-block; width: 36px; height: 2px; background: var(--cyan); border-radius: 2px; box-shadow: var(--glow-cyan); }
+.hero-eyebrow::before { display: none; }
 .hero-name { font-family: var(--font-display); font-size: clamp(3rem,8vw,6.5rem); font-weight: 900; color: #1a1a1a; line-height: 1.0; letter-spacing: -.03em; margin-bottom: .6rem; }
 .hero-name .accent { color: #1a1a1a; }
 .hero-tagline { font-size: clamp(1rem,2.2vw,1.35rem); font-weight: 300; color: var(--muted); max-width: 640px; margin-bottom: 2.5rem; }
@@ -364,10 +364,10 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-eyebrow">Senior WFM &amp; Business Analyst</div>
+  <div class="hero-eyebrow">Senior Workforce &amp; Business Analyst</div>
   <h1 class="hero-name reveal">Manasi <span class="accent">Ahire</span></h1>
   <p class="hero-tagline reveal">
-    7 years. 3 industries. One goal is turning workforce and operational complexity into measurable results. I build the forecasting models, capacity workflows, and real-time dashboards that help organizations to plan smarter.
+    7 years. 3 industries. I build the forecasting models, capacity planning workflows, and real-time dashboards that help organizations to plan smarter.
   </p>
   <div class="hero-actions reveal">
     <a href="#experience" class="btn-primary">View My Work ↓</a>
@@ -386,39 +386,39 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
   <div class="section-label">01 / About</div>
   <div class="about-grid">
     <div class="about-narrative reveal">
-      <h2 class="section-title">WFM strategist.<br><em>Data storyteller.</em></h2>
-       <p>I'm a Senior Workforce Analyst with <span class="highlight">7 years of experience</span> delivering data-driven forecasting, capacity planning, and real-time optimization across fintech, luxury retail, and the utility industry. I specialize in transforming complex workforce data into scalable analytical solutions and recommendations that improve performance, efficiency and decision-making. </p>
-      <p>My career spans the full WFM lifecycle, from monitoring <span class="highlight">over 150 agents in real time</span> at Genpact to creating scheduling, adherence and performance dashboards for global luxury retail operations at Richemont, to optimizing call volume forecasting and reporting pipelines at CoServ Electric. I have hands-on expertise working with enterprise platforms like <span class="highlight">NICE IEX, Calabrio, and Verint</span> combined with strong technical capabilities in SQL, Tableau, Python and Power BI. </p>
+      <h2 class="section-title">WFM strategist.</h2>
+      <p>I'm a Senior Workforce Analyst with <span class="highlight">7 years of experience</span> delivering data-driven forecasting, capacity planning, and real-time optimization across fintech, luxury retail, and the utility industry. I build analytical infrastructure that turns raw operational data into executive-ready recommendations.</p>
+      <p>My career spans the full WFM stack — from monitoring <span class="highlight">150+ agents in real time</span> at Genpact to architecting scheduling and adherence dashboards for global luxury retail at Richemont, to optimizing call volume forecasting and Power BI leadership pipelines at CoServ Electric. I integrate enterprise platforms like <span class="highlight">NICE IEX, Calabrio, and Verint</span> and speak fluent SQL, Python, and Tableau.</p>
     </div>
     <div class="skills-col reveal">
       <div class="skill-group">
-        <div class="skill-group-label">Workforce Management Systems</div>
+        <div class="skill-group-label">WFM Platforms</div>
         <div class="chip-wrap">
-          <span class="chip">NICE IEX</span><span class="chip">Calabrio</span><span class="chip">Verint</span><span class="chip">CXOne</span><span class="chip">Vonage</span><span class="chip">UKG</span>
+          <span class="chip">NICE IEX</span><span class="chip">Calabrio</span><span class="chip">Verint</span><span class="chip">CXOne</span><span class="chip">Vonage</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Data Tools & Analytics</div>
+        <div class="skill-group-label">Analytics & BI</div>
         <div class="chip-wrap">
-          <span class="chip">Excel/VBA</span><span class="chip">Power Query</span><span class="chip">Python</span><span class="chip">Tableau</span><span class="chip">R</span><span class="chip">Power BI</span><span class="chip">MS Access</span><span class="chip">Looker Studio</span><span class="chip">QlikView</span><span class="chip">SQL</span><span class="chip">Snowflake</span>
+          <span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">Looker Studio</span><span class="chip">QlikView</span><span class="chip">SQL</span><span class="chip">Snowflake</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-label">Reporting</div>
+        <div class="skill-group-label">Data & Programming</div>
         <div class="chip-wrap">
-          <span class="chip blue">KPI Framework Design</span><span class="chip blue">ETL Process</span><span class="chip blue">Data Validation & QA</span>
+          <span class="chip blue">Python</span><span class="chip blue">R</span><span class="chip blue">Excel / VBA</span><span class="chip blue">Power Query</span><span class="chip blue">Access</span>
         </div>
       </div>
       <div class="skill-group">
         <div class="skill-group-label">Methods & Operations</div>
         <div class="chip-wrap">
-          <span class="chip success">Forecast & Capacity Planning</span><span class="chip success">SLA </span><span class="chip success">Requirements Gathering</span><span class="chip success">Scheduling Optimization</span><span class="chip success">Intraday Management</span><span class="chip success">Headcount Planning</span>
+          <span class="chip success">Forecasting & Capacity Planning</span><span class="chip success">SLA Management</span><span class="chip success">Scheduling Optimization</span><span class="chip success">Lean Six Sigma</span><span class="chip success">Agile / SDLC</span>
         </div>
       </div>
       <div class="skill-group">
         <div class="skill-group-label">Business Systems</div>
         <div class="chip-wrap">
-          <span class="chip">SAP</span><span class="chip">Zendesk</span><span class="chip">Jira</span><span class="chip">Visio</span><span class="chip">Sharepoint</span>
+          <span class="chip">SAP</span><span class="chip">Zendesk</span><span class="chip">Jira</span><span class="chip">Visio</span>
         </div>
       </div>
     </div>
@@ -576,7 +576,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
       <div class="edu-degree">M.S. Business Analytics</div>
       <div class="edu-school">University of North Texas, Denton, TX</div>
       <div class="edu-date">Graduated Dec 2024 · GPA 3.8 / 4.0</div>
-      <p class="edu-detail">Graduate-level coursework in predictive modeling, data warehousing, statistical analysis, and business intelligence. Applied machine learning to real-world datasets across capstone and research projects.</p>
+      <p class="edu-detail">Advanced coursework in predictive modeling, data warehousing, statistical analysis, and business intelligence.</p>
     </div>
   </div>
 </section>
@@ -584,14 +584,14 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">04 / Projects</div>
-  <h2 class="section-title">Things I've <em>built &amp; shipped</em></h2>
+  <h2 class="section-title">Things I've <em>built</em></h2>
   <div class="projects-grid">
 
     <div class="project-card reveal">
       <div class="project-body">
         <div class="project-category">Machine Learning / Mental Health Analytics</div>
-        <div class="project-title">Factors Affecting University Student Mental Health using Machine Learning Models </div>
-        <p class="project-desc">Applied survey questionnaire data to create a study that looked at all the factors impacting student mental health. I used ANOVA and regression analysis to check our results, and then trained and compared logistic regression and gradient boosting models so as to provide evidence-based suggestions that will help make campus support services better. </p>
+        <div class="project-title">Factors Affecting University Student Mental Health — ML Study</div>
+        <p class="project-desc">Designed an end-to-end study using survey questionnaire data to identify leading factors impacting student mental health. Applied ANOVA and regression analysis to validate findings, then trained and compared logistic regression and gradient boosting models to generate evidence-based recommendations for improving campus support services.</p>
         <div class="project-metrics">
           <span class="metric-badge">ANOVA + Regression</span>
           <span class="metric-badge">Gradient Boosting</span>
@@ -606,8 +606,8 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     <div class="project-card reveal">
       <div class="project-body">
         <div class="project-category">Data Engineering / Business Intelligence</div>
-        <div class="project-title">Data Warehouse Development for a Car Rental Platform</div>
-        <p class="project-desc"> Designed and ran a full MySQL relational database, which included defining schemas, building tables, and using ER and dimensional modeling to set up entity relationships. Executed ETL processes to combine data from multiple sources, and then built interactive QlikView dashboards to allow the users compare rental performance metrics across different locations and time periods.</p>
+        <div class="project-title">End-to-End Data Warehouse for a Car Rental Platform</div>
+        <p class="project-desc">Designed and managed a full MySQL relational database — defining schemas, building tables, and establishing entity relationships via ER and dimensional modeling. Executed ETL procedures to integrate multi-source data, then built interactive QlikView dashboards to benchmark rental performance metrics across locations and time periods.</p>
         <div class="project-metrics">
           <span class="metric-badge">ER & Dimensional Modeling</span>
           <span class="metric-badge">Full ETL Pipeline</span>
@@ -622,15 +622,15 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
     <div class="project-card reveal">
       <div class="project-body">
         <div class="project-category">Predictive Modeling / Sports Analytics</div>
-        <div class="project-title">NBA Career Prediction in SAS Enterprise Miner</div>
-        <p class="project-desc"> Built and compared different classification models, like logistic regression, decision trees, and auto-neural networks, to predict whether an NBA player would have a career that will last more than 5 years based on their rookie season performance statistics. Evaluated the models based on ROC curves and misclassification rates and chose the auto-neural network as the best model for deployment as it showed best accuracy across both metrics.</p>
+        <div class="project-title">NBA Career Prediction Using Machine Learning in SAS Enterprise Miner</div>
+        <p class="project-desc">Built and compared multiple classification models — logistic regression, decision trees, and auto-neural networks — to predict whether an NBA player would have a career lasting 5+ years based on rookie-season performance stats. Evaluated models against ROC curves and misclassification rates, selecting the auto-neural network for deployment as the top performer across both metrics.</p>
         <div class="project-metrics">
-          <span class="metric-badge">ROC-AUC Evaluation</span>
-          <span class="metric-badge">Binary Classification</span>
-          <span class="metric-badge">Feature Engineering</span>
+          <span class="metric-badge">Highest ROC value</span>
+          <span class="metric-badge">Lowest misclassification rate</span>
+          <span class="metric-badge">3 models compared</span>
         </div>
         <div class="project-tags">
-          <span class="tag">SAS Enterprise Miner</span><span class="tag">Neural Networks</span><span class="tag">Gradient Boosting</span><span class="tag">Hyperparameter Tuning</span><span class="tag">Confusion Matrix</span>
+          <span class="tag">SAS Enterprise Miner</span><span class="tag">Logistic Regression</span><span class="tag">Decision Trees</span><span class="tag">Neural Networks</span><span class="tag">ROC Analysis</span>
         </div>
       </div>
     </div>
@@ -641,8 +641,8 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
   <div class="contact-banner reveal">
     <div class="section-label" style="text-align:center;display:block;">05 / Contact</div>
     <h2 class="section-title" style="text-align:center;">Let's build something<br><em>worth measuring</em></h2>
-    <p class="contact-tagline">Open to full-time opportunities in Workforce Analytics, and Business Analyst roles. Got new ideas for business improvement let's connect.</p>
-    <a href="/cdn-cgi/l/email-protection#8fc2eee1eefce6cee7e6fdeacfe2f6a1fae1fba1eaebfa" class="contact-email"><span class="__cf_email__" data-cfemail="d09db1beb1a3b991b8b9a2b590bda9fea5bea4feb5b4a5">[email&#160;protected]</span></a>
+    <p class="contact-tagline">Open to full-time WFM, workforce analytics, and business analyst roles. If your team needs someone who can bridge real-time operations and strategic workforce planning — let's connect.</p>
+    <a href="mailto:manasiahire.aws@gmail.com" class="contact-email">manasiahire.aws@gmail.com</a>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/manasi-ahire" target="_blank" class="social-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -652,7 +652,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
         (940) 390-4625
       </a>
-      <a href="/cdn-cgi/l/email-protection#efa28e818e9c86ae87869d8aaf8296c19a819bc18a8b9a" class="social-link">
+      <a href="mailto:manasiahire.aws@gmail.com" class="social-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Email
       </a>
