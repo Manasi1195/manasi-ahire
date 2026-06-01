@@ -1,4 +1,4 @@
-# Manasi Ahire — Portfolio
+# Manasi Ahire Portfolio
 
 > Personal portfolio site for Manasi Ahire, Senior Workforce Analyst & Business Intelligence Professional.
 
@@ -8,15 +8,15 @@
 
 ## About the Site
 
-Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies. Designed to load fast and work everywhere.
+Built with vanilla HTML, CSS, and JavaScript, no frameworks, no build tools, no dependencies. Designed to load fast and work everywhere.
 
 **What's inside:**
 - Animated particle network background
-- Scroll-reveal animations
+- Scroll reveal animations
 - Continuous vertical timeline for work experience (Challenge / Built / Result format)
 - Skills organized by category with hover-interactive chips
 - Project cards with metric badges and tech tags
-- Fully responsive — mobile, tablet, desktop
+- Fully responsive on mobile, tablet, desktop
 
 ---
 
@@ -34,7 +34,7 @@ Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, 
 
 ## Running Locally
 
-No install needed — just open the file.
+No install needed. just open the file.
 
 ```bash
 git clone https://github.com/manasi1195/manasi-ahire.git
