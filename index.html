@@ -6,7 +6,7 @@
 <title>Manasi Ahire, Senior Workforce Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   /* Backgrounds */
@@ -27,9 +27,9 @@
   --text:        #3d3530;   /* body copy — deep warm brown-grey */
   --success:     #b85c00;   /* tertiary accent — deep amber */
 
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'DM Sans', sans-serif;
   --font-body:    'DM Sans', sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
+  --font-mono:    'DM Sans', sans-serif;
 
   --glow-cyan: 0 0 16px rgba(192,57,43,.2), 0 0 40px rgba(192,57,43,.08);
   --glow-blue: 0 0 16px rgba(224,92,74,.2), 0 0 40px rgba(224,92,74,.08);
@@ -53,7 +53,7 @@ nav {
   border-bottom: 1px solid var(--navy-border); transition: box-shadow var(--t);
 }
 nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.1); }
-.nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--white); }
+.nav-logo { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); }
 .nav-logo span { color: var(--cyan); }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
@@ -79,8 +79,8 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.1); }
 
 /* SECTIONS */
 section { position: relative; z-index: 1; padding: 100px 5vw; }
-.section-label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em; color: var(--cyan); text-transform: uppercase; margin-bottom: .75rem; }
-.section-title { font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.8rem); font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 3rem; }
+.section-label { font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: .18em; color: var(--cyan); text-transform: uppercase; margin-bottom: .75rem; }
+.section-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 3rem; }
 .section-title em { font-style: normal; color: var(--cyan); }
 
 /* REVEAL — content visible by default; JS adds anim-ready to animate on scroll */
@@ -95,21 +95,21 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   text-transform: uppercase; margin-bottom: 1.2rem; display: flex; align-items: center; gap: .75rem;
 }
 .hero-eyebrow::before { display: none; }
-.hero-name { font-family: var(--font-display); font-size: clamp(3rem,8vw,6.5rem); font-weight: 900; color: #1a1a1a; line-height: 1.0; letter-spacing: -.03em; margin-bottom: .6rem; }
+.hero-name { font-family: var(--font-display); font-size: clamp(2rem,7vw,5.5rem); font-weight: 900; color: #1a1a1a; line-height: 1.0; letter-spacing: -.03em; margin-bottom: .6rem; }
 .hero-name .accent { color: #1a1a1a; }
-.hero-tagline { font-size: clamp(1rem,2.2vw,1.35rem); font-weight: 300; color: var(--muted); max-width: 640px; margin-bottom: 2.5rem; }
+.hero-tagline { font-size: 0.9rem; font-weight: 300; color: var(--muted); max-width: 640px; margin-bottom: 2.5rem; }
 .hero-tagline strong { color: var(--white); font-weight: 600; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem;
   background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 100%);
-  color: var(--navy); font-weight: 600; font-size: .9rem; border-radius: 8px;
+  color: var(--navy); font-weight: 600; font-size: 0.9rem; border-radius: 8px;
   box-shadow: var(--glow-cyan); transition: transform var(--t), filter var(--t);
 }
 .btn-primary:hover { transform: translateY(-3px); filter: brightness(1.1); }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem;
-  border: 1.5px solid var(--navy-border); color: var(--text); font-weight: 500; font-size: .9rem; border-radius: 8px;
+  border: 1.5px solid var(--navy-border); color: var(--text); font-weight: 500; font-size: 0.9rem; border-radius: 8px;
   transition: border-color var(--t), color var(--t), background var(--t), transform var(--t);
 }
 .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); transform: translateY(-3px); }
@@ -119,26 +119,26 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
   transition: border-color var(--t), transform var(--t), box-shadow var(--t);
 }
 .stat-card:hover { border-color: var(--cyan); transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,229,255,.12); }
-.stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; color: #1a1a1a; line-height: 1; }
-.stat-label { font-family: var(--font-mono); font-size: .68rem; color: #5a5a5a; text-transform: uppercase; letter-spacing: .12em; margin-top: .35rem; }
+.stat-num { font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: #1a1a1a; line-height: 1; }
+.stat-label { font-family: var(--font-mono); font-size: 0.9rem; color: #5a5a5a; text-transform: uppercase; letter-spacing: .12em; margin-top: .35rem; }
 
 /* ABOUT */
 #about { background: var(--navy-mid); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-.about-narrative p { color: var(--text); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+.about-narrative p { color: var(--text); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.2rem; }
 .about-narrative p:last-child { margin-bottom: 0; }
 .highlight { color: var(--cyan); font-weight: 600; }
 .skill-group { margin-bottom: 1.75rem; }
-.skill-group-label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .16em; color: var(--muted); text-transform: uppercase; margin-bottom: .65rem; }
+.skill-group-label { font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: .16em; color: var(--muted); text-transform: uppercase; margin-bottom: .65rem; }
 .chip-wrap { display: flex; flex-wrap: wrap; gap: .45rem; }
 .chip {
-  font-family: var(--font-mono); font-size: .72rem; padding: .32rem .8rem; border-radius: 100px;
+  font-family: var(--font-mono); font-size: 0.9rem; padding: .32rem .8rem; border-radius: 100px;
   border: 1px solid var(--navy-border); color: var(--muted); background: var(--navy-card);
-  transition: color var(--t), border-color var(--t), background var(--t), transform var(--t); cursor: default;
+  cursor: default;
 }
-.chip:hover { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); transform: scale(1.06); }
-.chip.blue:hover { color: #2563c7; border-color: #2563c7; background: rgba(37,99,199,.1); }
-.chip.success:hover { color: #2d7a3a; border-color: #2d7a3a; background: rgba(45,122,58,.1); }
+.chip:hover { color: var(--muted); border-color: var(--navy-border); background: var(--navy-card); transform: none; }
+.chip.blue:hover { color: var(--muted); border-color: var(--navy-border); background: var(--navy-card); }
+.chip.success:hover { color: var(--muted); border-color: var(--navy-border); background: var(--navy-card); }
 
 /* EXPERIENCE TIMELINE */
 .exp-timeline {
@@ -177,7 +177,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 }
 .exp-date {
   font-family: var(--font-mono);
-  font-size: .68rem;
+  font-size: 0.9rem;
   color: var(--muted);
   letter-spacing: .06em;
   line-height: 1.5;
@@ -228,20 +228,20 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .exp-card:hover::before { opacity: 1; }
 
 .exp-meta { margin-bottom: 1.25rem; }
-.exp-role { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); }
-.exp-company { font-size: .88rem; color: var(--cyan); margin-top: .15rem; }
+.exp-role { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); }
+.exp-company { font-size: 0.9rem; color: var(--cyan); margin-top: .15rem; }
 
 .story-blocks { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1.25rem; }
 .story-block { background: rgba(255,255,255,.03); border: 1px solid var(--navy-border); border-radius: 10px; padding: 1rem 1.1rem; }
-.story-block-label { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+.story-block-label { font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
 .story-block-label.challenge { color: #c0392b; }
 .story-block-label.built { color: #2563c7; }
 .story-block-label.result { color: #2d7a3a; }
-.story-block p { font-size: .87rem; color: var(--text); line-height: 1.6; }
+.story-block p { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
 
 .win-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
 .win-pill {
-  font-family: var(--font-mono); font-size: .72rem; padding: .3rem .85rem; border-radius: 100px;
+  font-family: var(--font-mono); font-size: 0.9rem; padding: .3rem .85rem; border-radius: 100px;
   font-weight: 500; display: inline-flex; align-items: center; gap: .4rem;
   transition: transform var(--t);
 }
@@ -267,13 +267,13 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,.3), 0 0 30px rgba(0,229,255,.08); border-color: rgba(0,229,255,.25); }
 .project-card:hover::before { opacity: 1; }
 .project-body { padding: 1.6rem; }
-.project-category { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-bottom: .5rem; }
+.project-category { font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-bottom: .5rem; }
 .project-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: .65rem; line-height: 1.25; }
-.project-desc { font-size: .88rem; color: var(--text); line-height: 1.65; margin-bottom: 1.25rem; }
+.project-desc { font-size: 0.9rem; color: var(--text); line-height: 1.65; margin-bottom: 1.25rem; }
 .project-metrics { display: flex; gap: .65rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-.metric-badge { font-family: var(--font-mono); font-size: .7rem; padding: .25rem .7rem; background: var(--cyan-dim); color: var(--cyan); border-radius: 4px; border: 1px solid rgba(0,229,255,.2); }
+.metric-badge { font-family: var(--font-mono); font-size: 0.9rem; padding: .25rem .7rem; background: var(--cyan-dim); color: var(--cyan); border-radius: 4px; border: 1px solid rgba(0,229,255,.2); }
 .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
-.tag { font-family: var(--font-mono); font-size: .66rem; padding: .2rem .55rem; background: rgba(255,255,255,.04); border: 1px solid var(--navy-border); border-radius: 4px; color: var(--muted); transition: color var(--t), border-color var(--t); }
+.tag { font-family: var(--font-mono); font-size: 0.9rem; padding: .2rem .55rem; background: rgba(255,255,255,.04); border: 1px solid var(--navy-border); border-radius: 4px; color: var(--muted); transition: color var(--t), border-color var(--t); }
 .project-card:hover .tag { color: var(--text); border-color: rgba(255,255,255,.12); }
 
 /* EDUCATION */
@@ -284,10 +284,10 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 }
 .edu-card:hover, .cert-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.25), 0 0 24px rgba(41,121,255,.1); border-color: rgba(41,121,255,.3); }
 .edu-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--blue-dim); border: 1px solid rgba(41,121,255,.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
-.edu-degree { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: .2rem; }
-.edu-school { color: var(--blue); font-size: .9rem; margin-bottom: .4rem; }
-.edu-date { font-family: var(--font-mono); font-size: .7rem; color: var(--muted); }
-.edu-detail { font-size: .85rem; color: var(--text); margin-top: .75rem; line-height: 1.6; }
+.edu-degree { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: .2rem; }
+.edu-school { color: var(--blue); font-size: 0.9rem; margin-bottom: .4rem; }
+.edu-date { font-family: var(--font-mono); font-size: 0.9rem; color: var(--muted); }
+.edu-detail { font-size: 0.9rem; color: var(--text); margin-top: .75rem; line-height: 1.6; }
 .cert-list { display: flex; flex-direction: column; gap: .85rem; }
 .cert-item {
   display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem;
@@ -296,15 +296,15 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 }
 .cert-item:hover { border-color: var(--cyan); background: var(--cyan-dim); transform: translateX(4px); }
 .cert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: var(--glow-cyan); flex-shrink: 0; }
-.cert-name { font-size: .88rem; color: var(--text); font-weight: 500; }
-.cert-issuer { font-family: var(--font-mono); font-size: .68rem; color: var(--muted); margin-top: .15rem; }
+.cert-name { font-size: 0.9rem; color: var(--text); font-weight: 500; }
+.cert-issuer { font-family: var(--font-mono); font-size: 0.9rem; color: var(--muted); margin-top: .15rem; }
 
 /* CONTACT */
 #contact { background: var(--navy-mid); text-align: center; }
 .contact-banner { max-width: 700px; margin: 0 auto; }
-.contact-tagline { font-size: 1.05rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.7; }
-.contact-email {
-  font-family: var(--font-display); font-size: clamp(1.4rem,3vw,2.2rem); font-weight: 700;
+.contact-tagline { font-size: 0.9rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.7; }
+{
+  font-family: var(--font-display); font-size: 1.15rem; font-weight: 700;
   color: var(--white); margin-bottom: 2.5rem; display: block;
   transition: color var(--t), text-shadow var(--t);
 }
@@ -318,7 +318,7 @@ section { position: relative; z-index: 1; padding: 100px 5vw; }
 }
 .social-link:hover { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); transform: translateY(-3px); box-shadow: var(--glow-cyan); }
 
-footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; border-top: 1px solid var(--navy-border); font-family: var(--font-mono); font-size: .7rem; color: var(--muted); }
+footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; border-top: 1px solid var(--navy-border); font-family: var(--font-mono); font-size: 0.9rem; color: var(--muted); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -386,9 +386,8 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
   <div class="section-label">01 / About</div>
   <div class="about-grid">
     <div class="about-narrative reveal">
-      <h2 class="section-title">WFM strategist.</h2>
-      <p>I'm a Senior Workforce Analyst with <span class="highlight">7 years of experience</span> delivering data-driven forecasting, capacity planning, and real-time optimization across fintech, luxury retail, and the utility industry. I build analytical infrastructure that turns raw operational data into executive-ready recommendations.</p>
-      <p>My career spans the full WFM stack, from monitoring <span class="highlight">150+ agents in real time</span> at Genpact to architecting scheduling and adherence dashboards for global luxury retail at Richemont, to optimizing call volume forecasting and Power BI leadership pipelines at CoServ Electric. I integrate enterprise platforms like <span class="highlight">NICE IEX, Calabrio, and Verint</span> and speak fluent SQL, Python, and Tableau.</p>
+      <p>I'm a Senior Workforce Analyst with 7 years of experience delivering data-driven forecasting, capacity planning, and real-time optimization across fintech, luxury retail, and the utility industry. I build analytical infrastructure that turns raw operational data into executive-ready recommendations.</p>
+      <p>My career spans the full WFM stack, from monitoring 150+ agents in real time at Genpact to architecting scheduling and adherence dashboards for global luxury retail at Richemont, to optimizing call volume forecasting and Power BI leadership pipelines at CoServ Electric. I integrate enterprise platforms like NICE IEX, Calabrio, and Verint and speak fluent SQL, Python, and Tableau.</p>
     </div>
     <div class="skills-col reveal">
       <div class="skill-group">
@@ -428,7 +427,6 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">02 / Experience</div>
-  <h2 class="section-title">My <em>Experience</em></h2>
   <div class="exp-timeline">
 
     <div class="exp-row reveal">
@@ -569,7 +567,6 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <!-- EDUCATION -->
 <section id="education">
   <div class="section-label">03 / Education</div>
-  <h2 class="section-title">Academic <em>Background</em></h2>
   <div>
     <div class="edu-card reveal">
       <div class="edu-icon">🎓</div>
@@ -584,7 +581,6 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">04 / Projects</div>
-  <h2 class="section-title">Things I've <em>built</em></h2>
   <div class="projects-grid">
 
     <div class="project-card reveal">
@@ -656,7 +652,6 @@ footer { position: relative; z-index: 1; text-align: center; padding: 1.75rem; b
 <section id="contact">
   <div class="contact-banner reveal">
     <div class="section-label" style="text-align:center;display:block;">05 / Contact</div>
-    <h2 class="section-title" style="text-align:center;">Let's build something<br><em>worth measuring</em></h2>
     <p class="contact-tagline">Open to full-time WFM, workforce analytics, and business analyst roles. If your team needs someone who can bridge real-time operations and strategic workforce planning, let's connect.</p>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/manasi-ahire" target="_blank" class="social-link">
